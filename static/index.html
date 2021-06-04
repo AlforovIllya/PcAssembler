@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+  <title>PcAssembler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+    <link href="/css/index.css" rel="stylesheet">
+
+
+
+  <script type="text/javascript" src="js/libreria.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+
+
+
+</head>
+<body id="body">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a id="navText" class="navbar-brand" href="#">PcAssembler</a>
+          </div>
+        </div>
+    </nav>
+    <div class="container div-generation">
+        
+        
+        <div class="input-group">
+            <span class="input-group-addon">Insert Price</span>	
+            <input type="number" class="form-control curency" id="maxPrice" value="1000"> 
+            <span class="input-group-addon">$</span>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">Select PC Type</span>
+            <select id="selectType" class="form-control selectpicker">
+                <option value="1">Gaming</option>
+                <option value="2">Office</option>
+                <option value="3">Normal</option>
+            </select>
+
+        </div>
+        <br>
+        <button class="btn" id="generatePC">Create Your PC</button>   
+    </div> 
+    <br>
+    <div id="list">
+
+        <div class="container">
+
+          
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">CPU</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div id="CPU" class="panel-body"></div>
+                </div>
+
+
+            </div> 
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Motherboard</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div id="Motherboards" class="panel-body"></div>
+                </div>
+            </div> 
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Graphics Card</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div id="GraphicsCards" class="panel-body"></div>
+                </div>
+            </div> 
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">RAM</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div id="RAM" class="panel-body"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">CPU FAN</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div id="cpuFan" class="panel-body"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">PC CASE</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div id="case" class="panel-body"></div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Power Supplies</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div id="powerSup" class="panel-body"></div>
+                </div>
+            </div>
+        </div>
+		<div class="row">
+			<div class="container sm-4 priceContainer">
+				Total Price: <a id="totalPrice"></a>
+			</div>
+		</div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Select Item</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="modalText" class="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+</body>
